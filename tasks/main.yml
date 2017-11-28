@@ -1,0 +1,7 @@
+---
+# tasks file for bar
+
+- name: Touch a file (creates if not present, updates modification time if present)
+  win_file:
+    path: C:\foo.conf
+    state: touch

@@ -21,6 +21,12 @@ provisioner:
     ansible_winrm_server_cert_validation: ignore
   lint:
     name: ansible-lint
+    options:
+      excludes:
+        - .git
+        - .vagrant
+        - .molecule
+        - venv
 scenario:
   name: default
 verifier:

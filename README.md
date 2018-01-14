@@ -4,7 +4,12 @@ Notes:
 - Install virtualenv. Run the following:
     virtualenv venv
     source venv/bin/activate
-    pip install -r requirements
+    pip install -r requirements.txt
+
+- Upgrade pip packages:
+    pip install pip-upgrader
+    pip-upgrade
+    pip freeze > requirements.txt
 
 - Used these values to create this role: molecule init role -d molecule_vagrant -r bar -d vagrant
 - Added a simple win_file task.

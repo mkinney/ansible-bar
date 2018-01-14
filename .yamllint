@@ -1,13 +1,28 @@
+---
+
 extends: default
+
+ignore: |
+  venv/
 
 rules:
   braces:
+    level: warning
     max-spaces-inside: 1
-    level: error
   brackets:
+    level: warning
     max-spaces-inside: 1
-    level: error
+  colons:
+    level: warning
+  commas:
+    level: warning
+  comments: disable
+  comments-indentation: disable
+  document-start: disable
+  empty-lines:
+    level: warning
+  hyphens:
+    level: warning
+  indentation: disable
   line-length: disable
-  # NOTE(retr0h): Templates no longer fail this lint rule.
-  #               Uncomment if running old Molecule templates.
-  # truthy: disable
+  truthy: disable

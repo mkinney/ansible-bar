@@ -1,0 +1,1 @@
+inspec exec molecule/default/inspec/foo_spec.rb -t winrm://vagrant@127.0.0.1:55985 --password='vagrant'

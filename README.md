@@ -3,16 +3,19 @@ Notes:
 
 - Install virtualenv. Run the following:
 
-	virtualenv venv
-	source venv/bin/activate
-	pip install -r requirements.txt
-
+```
+virtualenv venv
+source venv/bin/activate
+pip install -r requirements.txt
+```
 
 - Upgrade pip packages:
 
-	pip install pip-upgrader
-	pip-upgrade
-	pip freeze > requirements.txt
+```
+pip install pip-upgrader
+pip-upgrade
+pip freeze > requirements.txt
+```
 
 - Used these values to create this role: molecule init role -d molecule_vagrant -r bar -d vagrant
 - Added a simple win_file task.
@@ -21,9 +24,16 @@ Notes:
 - Commented out steps in molecule/default/prepare.yml.
 
 - I could not get testinfra to work with Windows, so I am going to try using inspec
+
+```
     sudo gem install inspec
-  then from the molecule/default/inspec dir, you can now run:
+```
+
+then from the molecule/default/inspec dir, you can now run:
+
+```
     inspec exec foo_spec.rb -t winrm://vagrant@127.0.0.1:55985 --password='vagrant'
+```
 
 This should give you output that looks like this:
 
@@ -41,10 +51,13 @@ This should give you output that looks like this:
 	Test Summary: 1 successful, 0 failures, 0 skipped
 
 
-- So, you can now:
+- So, you can now run the entire lifecycle like this:
 
-	molecule lint
-	molecule converge
-	molecule idempotence
-	./verify
-	molecule destroy
+```
+    molecule lint
+    molecule converge
+    molecule idempotence
+    ./verify
+    molecule destroy
+```
+

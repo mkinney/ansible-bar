@@ -8,7 +8,7 @@ lint:
   name: yamllint
 platforms:
   - name: bar
-    box: windows-2016-core
+    box: StefanScherer/windows_2016
 provisioner:
   name: ansible
   connection_options:

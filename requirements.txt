@@ -29,7 +29,7 @@ mccabe==0.6.1
 molecule==2.6.0
 monotonic==1.4
 ntlm-auth==1.0.6
-paramiko==2.4.0
+paramiko==2.10.1
 pathspec==0.5.5
 pbr==3.1.1
 pexpect==4.3.1
